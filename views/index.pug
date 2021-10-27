@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h3 English To Katakana
+  
+  h2 Convert English words to Katakana Syllabary 
+  .converter 
+    form(action="", method="post") 
+      input(type="text" id='convert_inp' name='input' placeholder="Enter a word...")
+      button(type="submit" id='convert_btn') Convert it!
+  if(result)
+    h3=`Katakana   ${result}`
+    
